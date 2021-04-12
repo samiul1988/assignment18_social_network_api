@@ -32,7 +32,10 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
     * Following packages were used: ```express``` and ```mongoose```
     * Application's folder structure follows MVC paradigm
 
+### Demo Run
+![Demo Run](./assets/images/assignment18.gif)
+
 ### Link of Walkthrough Video
-* [Walthrough Video - Part 1](https://drive.google.com/file/d/1F3A44el71XP8yfWiKqT7gqlE_-VQZsFe/view)
-* [Walthrough Video - Part 2](https://drive.google.com/file/d/1cxLthWyl-nvZqStJUHg4ArWUBZeb9tAB/view)
+* [Walkthrough Video - Part 1](https://drive.google.com/file/d/1F3A44el71XP8yfWiKqT7gqlE_-VQZsFe/view)
+* [Walkthrough Video - Part 2](https://drive.google.com/file/d/1cxLthWyl-nvZqStJUHg4ArWUBZeb9tAB/view)
 
