@@ -36,15 +36,14 @@ module.exports.createThought =  async ({ body }, res) => {
     // }
 
     try {
+        const { userId, ...thoughtData } = body;
+
         // create a thought item from body data
-        const { _id } = await Thought.create({
-            thoughtText: body.thoughtText,
-            username: body.username
-        });
+        const { _id } = await Thought.create(thoughtData);
 
         // push the newly created thought item to correponding user data
         const dbUserData = await User.findOneAndUpdate(
-            { _id: body.userId },
+            { _id: userId },
             { $push: { thoughts: _id } },
             { new: true }
         );
@@ -61,7 +60,6 @@ module.exports.createThought =  async ({ body }, res) => {
 
 // update thought by id
 module.exports.updateThought = async ({ params, body }, res) => {
-    // Expected body content:
     
     try{
         const dbThoughtData = await Thought.findOneAndUpdate(
@@ -91,7 +89,20 @@ module.exports.deleteThought = async ({ params }, res) => {
             res.status(404).json({ message: 'No thought found with this id!' });
             return;
         }
-        res.json(dbThoughtData);
+
+        // push the newly created thought item to correponding user data
+        const dbUserData = await User.findOneAndUpdate(
+            { username: dbThoughtData.username },
+            { $pull: { thoughts: params.id } },
+            { new: true }
+        );
+
+        if (!dbUserData) {
+            res.status(404).json({ message: 'No user found with this userId!' });
+            return;
+        }
+
+        res.json(dbUserData);
     } catch (err) {
         err => res.json(err);
     }

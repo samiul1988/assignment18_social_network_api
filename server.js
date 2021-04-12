@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-api', {
   useUnifiedTopology: true
 });
 
-// Use this to log mongo queries being executed!
+// To log mongo queries being executed
 mongoose.set('debug', true);
 
 app.use(require('./routes'));

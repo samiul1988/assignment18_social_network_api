@@ -89,6 +89,9 @@ module.exports.deleteUser = async ({ params }, res) => {
                 }
             }
         );
+        
+        // Remove this user from other user's friend list
+        const updatedUsers = await User.updateMany({}, { $pull: { friends: params.id } });
 
         res.json("User and associated thoughts deleted!");
     } catch (err) {
