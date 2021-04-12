@@ -50,8 +50,6 @@ module.exports.createUser = ({ body }, res) => {
 
 // update user by id
 module.exports.updateUser = async ({ params, body }, res) => {
-    // Expected body content:
-    
     try{
         const dbUserData = await User.findOneAndUpdate(
             { _id: params.id },

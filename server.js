@@ -8,6 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+// Connect to MongoDB database
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-api', {
   useFindAndModify: false,
   useNewUrlParser: true,
