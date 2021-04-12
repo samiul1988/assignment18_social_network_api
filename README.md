@@ -33,6 +33,6 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
     * Application's folder structure follows MVC paradigm
 
 ### Link of Walkthrough Video
-[walthrough Video - Part 1](https://drive.google.com/file/d/1F3A44el71XP8yfWiKqT7gqlE_-VQZsFe/view)
-[walthrough Video - Part 2](https://drive.google.com/file/d/1cxLthWyl-nvZqStJUHg4ArWUBZeb9tAB/view)
+* [Walthrough Video - Part 1](https://drive.google.com/file/d/1F3A44el71XP8yfWiKqT7gqlE_-VQZsFe/view)
+* [Walthrough Video - Part 2](https://drive.google.com/file/d/1cxLthWyl-nvZqStJUHg4ArWUBZeb9tAB/view)
 
